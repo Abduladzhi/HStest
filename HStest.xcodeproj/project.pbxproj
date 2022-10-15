@@ -36,6 +36,7 @@
 		CEE3D80928FAE8690022EDCF /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE3D80728FAE8690022EDCF /* ImageCell.xib */; };
 		CEE3D80B28FB1A300022EDCF /* UserDefault + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3D80A28FB1A300022EDCF /* UserDefault + Ext.swift */; };
 		CEE3D80E28FB222E0022EDCF /* CollectionExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3D80D28FB222E0022EDCF /* CollectionExt.swift */; };
+		CEE3D81028FB28100022EDCF /* UIImageView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3D80F28FB28100022EDCF /* UIImageView + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		CEE3D80728FAE8690022EDCF /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		CEE3D80A28FB1A300022EDCF /* UserDefault + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault + Ext.swift"; sourceTree = "<group>"; };
 		CEE3D80D28FB222E0022EDCF /* CollectionExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExt.swift; sourceTree = "<group>"; };
+		CEE3D80F28FB28100022EDCF /* UIImageView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE3D80A28FB1A300022EDCF /* UserDefault + Ext.swift */,
+				CEE3D80F28FB28100022EDCF /* UIImageView + Ext.swift */,
 				CEE3D7D728F9D1600022EDCF /* CellConfigurator */,
 			);
 			path = Helpers;
@@ -356,6 +359,7 @@
 				CEE3D7EF28F9EE830022EDCF /* HeaderCategories.swift in Sources */,
 				CEE3D7CC28F9C5F30022EDCF /* MenuViewController.swift in Sources */,
 				CEE3D7BF28F9C2F00022EDCF /* TabBarController.swift in Sources */,
+				CEE3D81028FB28100022EDCF /* UIImageView + Ext.swift in Sources */,
 				CEE3D7AB28F98B520022EDCF /* AppDelegate.swift in Sources */,
 				CEE3D7DD28F9D1A20022EDCF /* Configurable.swift in Sources */,
 				CEE3D80B28FB1A300022EDCF /* UserDefault + Ext.swift in Sources */,

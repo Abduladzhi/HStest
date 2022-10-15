@@ -13,9 +13,9 @@ class FoodCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
     @IBOutlet weak var priceView: UIView!
     @IBOutlet weak var categoryName: UILabel!
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -38,8 +38,12 @@ extension FoodCell: Configurable {
         priceView.layer.masksToBounds = true
         priceView.layer.borderWidth = 1
         priceView.layer.borderColor = #colorLiteral(red: 1, green: 0.3348149955, blue: 0.4859694839, alpha: 1)
+        img.layer.masksToBounds = true
+        img.layer.cornerRadius = 66
         categoryName.text = "Категория: \(model.menu.nameCategory ?? "")"
         nameLabel.text = model.menu.name
+        img.loadImageAsync(with: model.menu.img)
+        
         descriptionLabel.text = model.menu.description
     }
     

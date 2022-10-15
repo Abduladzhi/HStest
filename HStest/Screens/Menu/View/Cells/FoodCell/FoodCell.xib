@@ -26,7 +26,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="DHZ-jx-qfI">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="DHZ-jx-qfI">
                         <rect key="frame" x="16" y="24" width="132" height="132"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -104,6 +104,7 @@
             <connections>
                 <outlet property="categoryName" destination="FOk-bZ-DMk" id="WjH-ac-zet"/>
                 <outlet property="descriptionLabel" destination="hCS-42-FUS" id="KYw-uA-3fi"/>
+                <outlet property="img" destination="DHZ-jx-qfI" id="Hti-m1-9aY"/>
                 <outlet property="nameLabel" destination="5pe-Sh-uby" id="sfI-Bn-5qb"/>
                 <outlet property="priceView" destination="Q9K-hM-bmq" id="LEU-Lv-ebk"/>
             </connections>

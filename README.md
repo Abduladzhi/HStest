@@ -7,7 +7,6 @@
 2. Viper
 3. UIKit
 
-Uploading Запись экрана 2022-10-15 в 20.55.11.mov…
 
-
+https://user-images.githubusercontent.com/99020333/196001319-02990722-0955-4053-9053-1c1785f7218a.mov
 

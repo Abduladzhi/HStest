@@ -2,7 +2,7 @@
 //  CollectionExt.swift
 //  HStest
 //
-//  Created by Abduladzhi on 14.10.2022.
+//  Created by Abduladzhi on 15.10.2022.
 //
 
 import Foundation

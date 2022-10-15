@@ -24,7 +24,6 @@ final class MenuPresenter {
     init(dataConverter: MenuDataConverterInput) {
         self.dataConverter = dataConverter
     }
-
 }
 
 

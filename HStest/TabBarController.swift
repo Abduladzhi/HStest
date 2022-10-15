@@ -13,14 +13,14 @@ final class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBar.tintColor = .black
+        tabBar.tintColor = UIColor(red: 0.992, green: 0.227, blue: 0.412, alpha: 1)
         let navController = UINavigationController()
         let menuScreenViewController = MenuSceenAssembly.assembleMenuScreen()
         navController.viewControllers = [menuScreenViewController]
         
         viewControllers = [navController]
         
-        viewControllers?[0].tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "heart"),
+        viewControllers?[0].tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "menu"),
                                                       selectedImage: nil)
     }
 }

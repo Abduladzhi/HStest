@@ -11,6 +11,7 @@ import UIKit
 protocol MenuTableViewManagerInput {
     func setup(tableView: UITableView)
     func update(with viewModel: MenuViewModel)
+    func getIndex(index: Int)
 }
 
 protocol MenuTableViewManagerDelegate: AnyObject {
@@ -26,6 +27,21 @@ final class MenuTableViewManager: NSObject{
 }
 
 extension MenuTableViewManager: MenuTableViewManagerInput {
+    func getIndex(index: Int) {
+
+        guard index == 0 else {
+            tableView?.scrollToRow(at: IndexPath(row: index, section: 1), at: .top, animated: true)
+            return
+        }
+        tableView?.scrollToRow(at: IndexPath(row: index, section: 1), at: .top, animated: true)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let indexPath = ["indexPath": "\(tableView?.indexPathsForVisibleRows?.first?.row ?? 0)"]
+        
+        NotificationCenter.default.post(name: Notification.Name("getIndexPath"), object: indexPath)
+    }
+    
     func setup(tableView: UITableView) {
         
         tableView.delegate = self
@@ -57,8 +73,10 @@ extension MenuTableViewManager: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: row.reuseId, for: indexPath)
         row.configurator.configure(cell: cell)
+        cell.selectionStyle = .none
         return cell
     }
+    
 }
 
 extension MenuTableViewManager: UITableViewDelegate {
@@ -67,16 +85,14 @@ extension MenuTableViewManager: UITableViewDelegate {
         
         let categories = viewModel?.sections[section].headerCategories
         
-        let header = HeaderCategories(categories: categories ?? [Categories.init(name: "", number: 0, isSelected: true)], delegate: self)
-        
+        let header = HeaderCategories(categories: categories ?? [Categories.init(id: 0, name: "", number: 0, isSelected: true)], delegate: self)
         if section == 1 {
             return header
         } else {
             return UIView()
         }
-        
     }
-
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 
         if section == 1 {

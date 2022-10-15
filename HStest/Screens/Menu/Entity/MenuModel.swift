@@ -7,26 +7,38 @@
 
 import Foundation
 
-struct MenuModel: Codable {
+class MenuModel: Codable {
     let items: [Items]
 
 }
-struct Items: Codable {
+class Items: Codable {
     let nameCategory: String
     let products: [Products]
 }
 
-struct Products: Codable {
-    let id: String
+class Products: Codable {
+    var nameCategory: String?
     let name: String
     let description: String
     let img: String
-    let price: String
-    let mass: String
+    init(nameCategory: String?, name: String, description: String, img: String) {
+        self.nameCategory = nameCategory
+        self.name = name
+        self.description = description
+        self.img = img
+    }
 }
 
-struct Categories {
+class Categories: Codable {
+    var id: Int
     var name: String
     var number: Int
-    var isSelected: Bool
+    var isSelected: Bool?
+    
+    init(id: Int, name: String, number: Int, isSelected: Bool?) {
+        self.id = id
+        self.name = name
+        self.number = number
+        self.isSelected = isSelected
+    }
 }
